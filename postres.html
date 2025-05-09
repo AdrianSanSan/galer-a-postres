@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!-- Configuración básica del documento -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Postres - Galería de Postres</title>
-    <!-- Enlace a Tailwind CSS vía CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Enlace al archivo CSS básico -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- Barra de navegación -->
     <nav class="bg-pink-600 text-white p-4 fixed w-full top-0">
       <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-2xl font-bold">Galería de Postres</h1>
@@ -23,15 +19,45 @@
       </div>
     </nav>
 
-    <!-- Sección de postres -->
     <section class="pt-20 pb-10">
       <div class="container mx-auto">
         <h2 class="text-3xl font-bold text-center mb-8">Nuestros Postres</h2>
+        <!-- Botones de filtro -->
+        <div class="flex justify-center space-x-4 mb-6">
+          <button
+            class="filter-btn bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
+            data-filter="all"
+          >
+            Todos
+          </button>
+          <button
+            class="filter-btn bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
+            data-filter="chocolate"
+          >
+            Chocolate
+          </button>
+          <button
+            class="filter-btn bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
+            data-filter="frutal"
+          >
+            Frutal
+          </button>
+          <button
+            class="filter-btn bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
+            data-filter="variado"
+          >
+            Variado
+          </button>
+        </div>
         <!-- Grid de postres -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="postres-grid"
+        >
           <!-- Postre 1 -->
           <div
-            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
+            class="postre-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
+            data-category="chocolate"
           >
             <img
               src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
@@ -51,7 +77,8 @@
           </div>
           <!-- Postre 2 -->
           <div
-            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
+            class="postre-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
+            data-category="frutal"
           >
             <img
               src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
@@ -71,7 +98,8 @@
           </div>
           <!-- Postre 3 -->
           <div
-            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
+            class="postre-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
+            data-category="variado"
           >
             <img
               src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
@@ -93,7 +121,6 @@
       </div>
     </section>
 
-    <!-- Enlace al archivo JavaScript -->
     <script src="js/script.js"></script>
   </body>
 </html>
