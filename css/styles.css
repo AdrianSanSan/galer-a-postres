@@ -1,0 +1,15 @@
+/* Archivo CSS básico para Galería de Postres */
+/* 1. Variable para el color principal */
+:root {
+  --color-principal: #db2777; /* Rosa para botones y detalles */
+}
+
+/* 2. Fuente global para el sitio */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* 3. Padding por defecto para secciones */
+section {
+  padding: 1rem;
+}
