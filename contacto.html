@@ -11,6 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Enlaza el archivo CSS personalizado para estilos adicionales -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Añade el favicon para la pestaña del navegador -->
+    <link rel="icon" type="image/x-icon" href="img/iconoPag.png" />
   </head>
   <body>
     <!-- Barra superior fija que muestra el nombre de la galería -->
@@ -23,15 +25,10 @@
 
     <!-- Barra de navegación fija para moverse entre páginas -->
     <nav class="bg-pink-600 text-white p-4 fixed w-full top-12 z-10">
-      <!-- Contenedor centrado para los enlaces de navegación -->
       <div class="container mx-auto flex justify-center items-center">
-        <!-- Lista de enlaces de navegación -->
         <ul class="flex space-x-6 text-xl">
-          <!-- Enlace a la página de inicio con efecto de subrayado al pasar el ratón -->
           <li><a href="index.html" class="hover:underline">Inicio</a></li>
-          <!-- Enlace a la página de postres con efecto de subrayado al pasar el ratón -->
           <li><a href="postres.html" class="hover:underline">Postres</a></li>
-          <!-- Elemento de la página actual (Contacto), deshabilitado y en gris -->
           <li><span class="text-gray-300 cursor-default">Contacto</span></li>
         </ul>
       </div>
@@ -42,7 +39,6 @@
       class="min-h-screen pt-28 pb-10 bg-cover bg-center"
       style="background-image: url('img/fondoContactanos.jpg')"
     >
-      <!-- Contenedor centrado para el formulario -->
       <div class="container mx-auto">
         <!-- Título de la sección de contacto -->
         <h2 class="text-3xl font-bold text-center mb-8 text-white">
@@ -53,7 +49,6 @@
           id="contact-form"
           class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg"
         >
-          <!-- Campo para el nombre -->
           <div class="mb-4">
             <label for="name" class="block text-gray-700 font-semibold mb-2"
               >Nombre</label
@@ -66,7 +61,6 @@
               required
             />
           </div>
-          <!-- Campo para el correo electrónico -->
           <div class="mb-4">
             <label for="email" class="block text-gray-700 font-semibold mb-2"
               >Correo Electrónico</label
@@ -79,7 +73,6 @@
               required
             />
           </div>
-          <!-- Campo para el mensaje -->
           <div class="mb-4">
             <label for="message" class="block text-gray-700 font-semibold mb-2"
               >Mensaje</label
@@ -92,7 +85,6 @@
               required
             ></textarea>
           </div>
-          <!-- Botón para enviar el formulario -->
           <button
             type="submit"
             class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 w-full"

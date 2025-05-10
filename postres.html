@@ -11,6 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Enlaza el archivo CSS personalizado para estilos adicionales -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Añade el favicon para la pestaña del navegador -->
+    <link rel="icon" type="image/x-icon" href="img/iconoPag.png" />
   </head>
   <body>
     <!-- Barra superior fija que muestra el nombre de la galería -->
@@ -23,15 +25,10 @@
 
     <!-- Barra de navegación fija para moverse entre páginas -->
     <nav class="bg-pink-600 text-white p-4 fixed w-full top-12 z-10">
-      <!-- Contenedor centrado para los enlaces de navegación -->
       <div class="container mx-auto flex justify-center items-center">
-        <!-- Lista de enlaces de navegación -->
         <ul class="flex space-x-6 text-xl">
-          <!-- Enlace a la página de inicio con efecto de subrayado al pasar el ratón -->
           <li><a href="index.html" class="hover:underline">Inicio</a></li>
-          <!-- Elemento de la página actual (Postres), deshabilitado y en gris -->
           <li><span class="text-gray-300 cursor-default">Postres</span></li>
-          <!-- Enlace a la página de contacto con efecto de subrayado al pasar el ratón -->
           <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
         </ul>
       </div>
@@ -42,19 +39,15 @@
       class="min-h-screen pt-28 pb-10 bg-cover bg-center"
       style="background-image: url('img/fondoPostres.jpg')"
     >
-      <!-- Contenedor centrado para el contenido -->
       <div class="container mx-auto">
-        <!-- Carrusel de imágenes de postres -->
+        <!-- Carrusel -->
         <div
           class="relative w-full mb-4 shadow-md rounded-lg border-2 border-white"
         >
-          <!-- Contenedor del carrusel con desbordamiento oculto -->
           <div class="carousel overflow-hidden">
-            <!-- Contenedor interno que desliza las imágenes -->
             <div
               class="carousel-inner flex transition-transform duration-500 ease-in-out"
             >
-              <!-- Elemento del carrusel: imagen de Tarta de Fresa -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/tartaFresa.jpg"
@@ -62,7 +55,6 @@
                   class="w-full h-64 object-cover"
                 />
               </div>
-              <!-- Elemento del carrusel: imagen de Galleta de Avena -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/galletaAvena.jpg"
@@ -70,7 +62,6 @@
                   class="w-full h-64 object-cover"
                 />
               </div>
-              <!-- Elemento del carrusel: imagen de Galleta de Chocolate -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/galletaChocolate.jpg"
@@ -78,7 +69,6 @@
                   class="w-full h-64 object-cover"
                 />
               </div>
-              <!-- Elemento del carrusel: imagen de Galleta de Mantequilla -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/galletaMantequilla.jpg"
@@ -86,7 +76,6 @@
                   class="w-full h-64 object-cover"
                 />
               </div>
-              <!-- Elemento del carrusel: imagen de Magdalena de Arándanos -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/magdalenaArandanos.jpg"
@@ -94,7 +83,6 @@
                   class="w-full h-64 object-cover"
                 />
               </div>
-              <!-- Elemento del carrusel: imagen de Magdalena de Chocolate -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/magdalenaChocolate.jpg"
@@ -102,7 +90,6 @@
                   class="w-full h-64 object-cover"
                 />
               </div>
-              <!-- Elemento del carrusel: imagen de Magdalena de Vainilla -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/magdalenaVainilla.jpg"
@@ -110,7 +97,6 @@
                   class="w-full h-64 object-cover"
                 />
               </div>
-              <!-- Elemento del carrusel: imagen de Tarta de Chocolate -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/tartaChocolate.jpg"
@@ -118,7 +104,6 @@
                   class="w-full h-64 object-cover"
                 />
               </div>
-              <!-- Elemento del carrusel: imagen de Tarta de Limón -->
               <div class="carousel-item flex-shrink-0 w-full">
                 <img
                   src="img/tartaLimon.jpg"
@@ -130,29 +115,25 @@
           </div>
         </div>
 
-        <!-- Menús de postres organizados en una fila (o columna en móviles) -->
+        <!-- Menús de postres -->
         <div class="flex flex-row w-full gap-4 md:flex-row flex-col">
-          <!-- Menú de Tartas -->
+          <!-- Tartas -->
           <div
             class="relative group bg-white rounded-lg shadow-lg flex-1 text-center h-64 border-2 border-white"
           >
-            <!-- Imagen de fondo para el menú de Tartas -->
             <img
               src="img/tartasBase.jpg"
               alt="Tartas"
               class="w-full h-full object-cover rounded-lg"
             />
-            <!-- Título del menú de Tartas con fondo semi-transparente -->
             <h3
               class="absolute top-0 left-0 w-full text-3xl font-semibold text-white bg-black bg-opacity-50 py-2"
             >
               Tartas
             </h3>
-            <!-- Menú desplegable que aparece al pasar el ratón -->
             <div
               class="dropdown w-full bg-white rounded-lg shadow-lg hidden group-hover:block z-10"
             >
-              <!-- Opción: Tarta de Chocolate -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="tarta-chocolate"
@@ -164,7 +145,6 @@
                 />
                 <span class="text-lg">Tarta de Chocolate</span>
               </button>
-              <!-- Opción: Tarta de Fresa -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="tarta-fresa"
@@ -176,7 +156,6 @@
                 />
                 <span class="text-lg">Tarta de Fresa</span>
               </button>
-              <!-- Opción: Tarta de Limón -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="tarta-limon"
@@ -190,27 +169,23 @@
               </button>
             </div>
           </div>
-          <!-- Menú de Magdalenas -->
+          <!-- Magdalenas -->
           <div
             class="relative group bg-white rounded-lg shadow-lg flex-1 text-center h-64 border-2 border-white"
           >
-            <!-- Imagen de fondo para el menú de Magdalenas -->
             <img
               src="img/magdalenasBase.jpg"
               alt="Magdalenas"
               class="w-full h-full object-cover rounded-lg"
             />
-            <!-- Título del menú de Magdalenas con fondo semi-transparente -->
             <h3
               class="absolute top-0 left-0 w-full text-3xl font-semibold text-white bg-black bg-opacity-50 py-2"
             >
               Magdalenas
             </h3>
-            <!-- Menú desplegable que aparece al pasar el ratón -->
             <div
               class="dropdown w-full bg-white rounded-lg shadow-lg hidden group-hover:block z-10"
             >
-              <!-- Opción: Magdalena de Vainilla -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="magdalena-vainilla"
@@ -222,7 +197,6 @@
                 />
                 <span class="text-lg">Magdalena de Vainilla</span>
               </button>
-              <!-- Opción: Magdalena de Chocolate -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="magdalena-chocolate"
@@ -234,7 +208,6 @@
                 />
                 <span class="text-lg">Magdalena de Chocolate</span>
               </button>
-              <!-- Opción: Magdalena de Arándanos -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="magdalena-arandanos"
@@ -248,27 +221,23 @@
               </button>
             </div>
           </div>
-          <!-- Menú de Galletas -->
+          <!-- Galletas -->
           <div
             class="relative group bg-white rounded-lg shadow-lg flex-1 text-center h-64 border-2 border-white"
           >
-            <!-- Imagen de fondo para el menú de Galletas -->
             <img
               src="img/galletasBase.jpg"
               alt="Galletas"
               class="w-full h-full object-cover rounded-lg"
             />
-            <!-- Título del menú de Galletas con fondo semi-transparente -->
             <h3
               class="absolute top-0 left-0 w-full text-3xl font-semibold text-white bg-black bg-opacity-50 py-2"
             >
               Galletas
             </h3>
-            <!-- Menú desplegable que aparece al pasar el ratón -->
             <div
               class="dropdown w-full bg-white rounded-lg shadow-lg hidden group-hover:block z-10"
             >
-              <!-- Opción: Galleta de Mantequilla -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="galleta-mantequilla"
@@ -280,7 +249,6 @@
                 />
                 <span class="text-lg">Galleta de Mantequilla</span>
               </button>
-              <!-- Opción: Galleta de Chocolate -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="galleta-chocolate"
@@ -292,7 +260,6 @@
                 />
                 <span class="text-lg">Galleta de Chocolate</span>
               </button>
-              <!-- Opción: Galleta de Avena -->
               <button
                 class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
                 data-dessert="galleta-avena"
@@ -308,23 +275,21 @@
           </div>
         </div>
 
-        <!-- Fondo oscurecido para el modal de información del postre -->
+        <!-- Fondo oscurecido -->
         <div
           id="dessert-info-backdrop"
           class="fixed inset-0 bg-black bg-opacity-50 hidden z-30"
         ></div>
 
-        <!-- Modal que muestra detalles de un postre seleccionado -->
+        <!-- Sección de información del postre -->
         <div
           id="dessert-info"
           class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-5xl bg-white rounded-lg shadow-lg p-12 hidden z-40 flex"
         >
-          <!-- Botón para cerrar el modal -->
           <button
             id="close-dessert-info"
             class="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
           >
-            <!-- Ícono de cerrar (cruz) -->
             <svg
               class="w-8 h-8"
               fill="none"
@@ -340,7 +305,6 @@
               ></path>
             </svg>
           </button>
-          <!-- Sección para la imagen del postre -->
           <div class="w-1/2 pr-6">
             <img
               id="dessert-image"
@@ -349,7 +313,6 @@
               class="w-full h-96 object-cover rounded"
             />
           </div>
-          <!-- Sección para el título y descripción del postre -->
           <div class="w-1/2 flex flex-col justify-center">
             <h3
               id="dessert-title"

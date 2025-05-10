@@ -11,6 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Enlaza el archivo CSS personalizado para estilos adicionales -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Añade el favicon para la pestaña del navegador -->
+    <link rel="icon" type="image/x-icon" href="img/iconoPag.png" />
   </head>
   <body>
     <!-- Barra superior fija que muestra el nombre de la galería -->
@@ -22,36 +24,27 @@
     </header>
     <!-- Barra de navegación fija para moverse entre páginas -->
     <nav class="bg-pink-600 text-white p-4 fixed w-full top-12 z-10">
-      <!-- Contenedor centrado para los enlaces de navegación -->
       <div class="container mx-auto flex justify-center items-center">
-        <!-- Lista de enlaces de navegación -->
         <ul class="flex space-x-6 text-xl">
-          <!-- Elemento de la página actual (Inicio), deshabilitado y en gris -->
           <li><span class="text-gray-300 cursor-default">Inicio</span></li>
-          <!-- Enlace a la página de postres con efecto de subrayado al pasar el ratón -->
           <li><a href="postres.html" class="hover:underline">Postres</a></li>
-          <!-- Enlace a la página de contacto con efecto de subrayado al pasar el ratón -->
           <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
         </ul>
       </div>
     </nav>
 
-    <!-- Sección principal (hero) que ocupa toda la pantalla -->
+    <!-- Sección principal -->
     <section
       class="min-h-screen flex items-center justify-center bg-cover bg-center"
       style="background-image: url('img/fondoBase.jpg')"
     >
-      <!-- Contenedor centrado con fondo semi-transparente para el contenido -->
       <div class="text-center text-white bg-black bg-opacity-50 p-8 rounded">
-        <!-- Título de bienvenida con fuente grande y negrita -->
         <h2 class="text-4xl font-bold mb-4">
           ¡Bienvenido a la Galería de Postres!
         </h2>
-        <!-- Descripción breve de la galería -->
         <p class="text-lg mb-6">
           Descubre los postres más deliciosos con recetas fáciles y hermosas.
         </p>
-        <!-- Botón que lleva a la página de postres con efecto de cambio de color al pasar el ratón -->
         <a
           href="postres.html"
           class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition"
