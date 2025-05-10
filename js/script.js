@@ -25,48 +25,57 @@ document.addEventListener("DOMContentLoaded", () => {
   const dessertData = {
     "tarta-chocolate": {
       title: "Tarta de Chocolate",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Deliciosa tarta de chocolate con un suave glaseado.",
+      image: "img/tartaChocolate.jpg",
+      description:
+        "Exquisita tarta elaborada con capas de bizcocho de cacao puro, rellena y cubierta con un cremoso glaseado de chocolate negro fundido, perfecta para los amantes del chocolate intenso.",
     },
     "tarta-fresa": {
       title: "Tarta de Fresa",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Tarta fresca con fresas naturales y crema batida.",
+      image: "img/tartaFresa.jpg",
+      description:
+        "Delicada tarta con un suave bizcocho de vainilla, rellena de crema batida ligera y fresas frescas de temporada, decorada con un toque de mermelada de fresa para un sabor vibrante.",
     },
     "tarta-limon": {
       title: "Tarta de Limón",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Tarta cítrica con un toque refrescante de limón.",
+      image: "img/tartaLimon.jpg",
+      description:
+        "Refrescante tarta con una base crujiente de galleta, un relleno cremoso de limón natural y un toque de merengue tostado, ideal para quienes buscan un equilibrio entre lo dulce y lo cítrico.",
     },
     "magdalena-vainilla": {
       title: "Magdalena de Vainilla",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Magdalena esponjosa con esencia de vainilla.",
+      image: "img/magdalenaVainilla.jpg",
+      description:
+        "Esponjosa magdalena artesanal infusionada con esencia de vainilla de Madagascar, coronada con un delicado glaseado de azúcar que resalta su sabor clásico y reconfortante.",
     },
     "magdalena-chocolate": {
       title: "Magdalena de Chocolate",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Magdalena rica en cacao con chips de chocolate.",
+      image: "img/magdalenaChocolate.jpg",
+      description:
+        "Jugosa magdalena de cacao intenso, repleta de chips de chocolate semiamargo que se derriten en la boca, perfecta para un capricho dulce en cualquier momento del día.",
     },
     "magdalena-arandanos": {
       title: "Magdalena de Arándanos",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Magdalena con arándanos frescos y un toque dulce.",
+      image: "img/magdalenaArandanos.jpg",
+      description:
+        "Suave magdalena con un toque de vainilla, cargada de arándanos frescos que aportan un estallido de sabor frutal en cada bocado, ideal para desayunos o meriendas.",
     },
     "galleta-mantequilla": {
       title: "Galleta de Mantequilla",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Galleta crujiente con rico sabor a mantequilla.",
+      image: "img/galletaMantequilla.jpg",
+      description:
+        "Crujiente galleta artesanal hecha con mantequilla de primera calidad, con un sabor rico y una textura que se deshace en la boca, perfecta para acompañar un café o té.",
     },
     "galleta-chocolate": {
       title: "Galleta de Chocolate",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Galleta con trozos de chocolate fundido.",
+      image: "img/galletaChocolate.jpg",
+      description:
+        "Deliciosa galleta crujiente con trozos generosos de chocolate fundido, equilibrada en dulzura y con un toque de sal que realza su sabor, ideal para los golosos.",
     },
     "galleta-avena": {
       title: "Galleta de Avena",
-      image: "img/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
-      description: "Galleta saludable con avena y un toque de miel.",
+      image: "img/galletaAvena.jpg",
+      description:
+        "Saludable y sabrosa galleta de avena integral, endulzada con miel natural y un toque de canela, con una textura rústica que la hace perfecta para un snack nutritivo.",
     },
   };
 
