@@ -84,26 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Botón de cerrar
   closeDessertInfo.addEventListener("click", () => {
     dessertInfo.classList.add("hidden");
     dessertBackdrop.classList.add("hidden");
-  });
-
-  // Ocultar dessert-info al hacer clic en otra opción
-  dessertOptions.forEach((option) => {
-    option.addEventListener("click", () => {
-      dessertInfo.classList.add("hidden");
-      dessertBackdrop.classList.add("hidden");
-      setTimeout(() => {
-        const dessertId = option.getAttribute("data-dessert");
-        const data = dessertData[dessertId];
-        dessertTitle.textContent = data.title;
-        dessertImage.src = data.image;
-        dessertDescription.textContent = data.description;
-        dessertInfo.classList.remove("hidden");
-        dessertBackdrop.classList.remove("hidden");
-      }, 0);
-    });
   });
 });

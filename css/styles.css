@@ -7,6 +7,17 @@ body {
   padding: 0 1rem;
 }
 
+/* Estilo para el título "Nuestros Postres" y títulos de postres */
+.dessert-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, #f472b6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
 /* Animación para los menús */
 .group {
   transition: transform 0.2s ease;
@@ -61,4 +72,9 @@ body {
 /* Estilo para el fondo oscurecido */
 #dessert-info-backdrop {
   transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilo para dessert-info */
+#dessert-info {
+  transition: transform 0.3s ease-in-out;
 }

@@ -27,10 +27,16 @@
     </nav>
 
     <section class="pt-28 pb-10">
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-8">Nuestros Postres</h2>
+      <div class="container mx-auto flex justify-center">
+        <h2
+          class="dessert-title text-5xl font-bold text-center mb-12 text-pink-800"
+        >
+          Nuestros Postres
+        </h2>
+      </div>
 
-        <!-- Carrusel -->
+      <!-- Carrusel -->
+      <div class="container mx-auto">
         <div
           class="relative w-full mb-8 shadow-md rounded-lg border-2 border-white"
         >
@@ -274,14 +280,14 @@
         <!-- Sección de información del postre -->
         <div
           id="dessert-info"
-          class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-3xl bg-white rounded-lg shadow-lg p-8 hidden z-40"
+          class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-5xl bg-white rounded-lg shadow-lg p-12 hidden z-40 flex"
         >
           <button
             id="close-dessert-info"
-            class="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+            class="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
           >
             <svg
-              class="w-6 h-6"
+              class="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -295,14 +301,21 @@
               ></path>
             </svg>
           </button>
-          <h3 id="dessert-title" class="text-3xl font-semibold mb-4"></h3>
-          <img
-            id="dessert-image"
-            src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
-            alt="Postre"
-            class="w-full h-64 object-cover rounded mb-4"
-          />
-          <p id="dessert-description" class="text-gray-600 text-lg"></p>
+          <div class="w-1/2 pr-6">
+            <img
+              id="dessert-image"
+              src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+              alt="Postre"
+              class="w-full h-96 object-cover rounded"
+            />
+          </div>
+          <div class="w-1/2 flex flex-col justify-center">
+            <h3
+              id="dessert-title"
+              class="dessert-title text-4xl font-semibold mb-4"
+            ></h3>
+            <p id="dessert-description" class="text-gray-600 text-xl"></p>
+          </div>
         </div>
       </div>
     </section>
