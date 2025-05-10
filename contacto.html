@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Galería de Postres</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="bg-pink-600 text-white p-4 fixed w-full top-0">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Galería de Postres</h1>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:underline">Inicio</a></li>
+          <li><a href="postres.html" class="hover:underline">Postres</a></li>
+          <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="pt-20 pb-10">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">Contáctanos</h2>
+        <form
+          id="contact-form"
+          class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg"
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-semibold mb-2"
+              >Nombre</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full p-2 border rounded"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-semibold mb-2"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full p-2 border rounded"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-gray-700 font-semibold mb-2"
+              >Mensaje</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              class="w-full p-2 border rounded"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 w-full"
+          >
+            Enviar
+          </button>
+        </form>
+        <p id="form-message" class="text-center mt-4 text-green-600 hidden">
+          ¡Mensaje enviado con éxito!
+        </p>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
