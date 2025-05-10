@@ -6,12 +6,23 @@
     <title>Postres - Galería de Postres</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <nav class="bg-pink-600 text-white p-4 fixed w-full top-0">
-      <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Galería de Postres</h1>
-        <ul class="flex space-x-6">
+  <body class="font-sans">
+    <!-- Nueva barra superior -->
+    <header
+      class="bg-pink-700 text-white text-center py-3 fixed w-full top-0 z-20"
+    >
+      <h1 class="font-playfair text-4xl font-bold">Galería de Postres</h1>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="bg-pink-600 text-white p-4 fixed w-full top-12 z-10">
+      <div class="container mx-auto flex justify-center items-center">
+        <ul class="flex space-x-6 text-lg font-semibold">
           <li><a href="index.html" class="hover:underline">Inicio</a></li>
           <li><a href="postres.html" class="hover:underline">Postres</a></li>
           <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
@@ -19,104 +30,219 @@
       </div>
     </nav>
 
-    <section class="pt-20 pb-10">
+    <section class="pt-28 pb-10">
       <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Nuestros Postres</h2>
-        <!-- Botones de filtro -->
-        <div class="flex justify-center space-x-4 mb-6">
-          <button
-            class="filter-btn bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
-            data-filter="all"
-          >
-            Todos
-          </button>
-          <button
-            class="filter-btn bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
-            data-filter="chocolate"
-          >
-            Chocolate
-          </button>
-          <button
-            class="filter-btn bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
-            data-filter="frutal"
-          >
-            Frutal
-          </button>
-          <button
-            class="filter-btn bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
-            data-filter="variado"
-          >
-            Variado
-          </button>
+        <h2 class="font-playfair text-4xl font-bold text-center mb-8">
+          Nuestros Postres
+        </h2>
+
+        <!-- Carrusel -->
+        <div class="relative w-full mb-8 shadow-md rounded-lg">
+          <div class="carousel overflow-hidden">
+            <div
+              class="carousel-inner flex transition-transform duration-500 ease-in-out"
+            >
+              <div class="carousel-item flex-shrink-0 w-full">
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Postre 1"
+                  class="w-full h-64 object-cover"
+                />
+              </div>
+              <div class="carousel-item flex-shrink-0 w-full">
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Postre 2"
+                  class="w-full h-64 object-cover"
+                />
+              </div>
+              <div class="carousel-item flex-shrink-0 w-full">
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Postre 3"
+                  class="w-full h-64 object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Grid de postres -->
+
+        <!-- Menús de postres -->
+        <div class="flex flex-row w-full gap-4 md:flex-row flex-col">
+          <!-- Tartas -->
+          <div
+            class="relative group bg-white rounded-lg shadow-lg flex-1 text-center h-64"
+          >
+            <img
+              src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+              alt="Tartas"
+              class="w-full h-full object-cover rounded-lg"
+            />
+            <h3
+              class="absolute top-0 left-0 w-full font-playfair text-3xl font-semibold text-white bg-black bg-opacity-50 py-2"
+            >
+              Tartas
+            </h3>
+            <div
+              class="dropdown w-full bg-white rounded-lg shadow-lg hidden group-hover:block z-10"
+            >
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="tarta-chocolate"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Tarta de Chocolate"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Tarta de Chocolate</span>
+              </button>
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="tarta-fresa"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Tarta de Fresa"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Tarta de Fresa</span>
+              </button>
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="tarta-limon"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Tarta de Limón"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Tarta de Limón</span>
+              </button>
+            </div>
+          </div>
+          <!-- Magdalenas -->
+          <div
+            class="relative group bg-white rounded-lg shadow-lg flex-1 text-center h-64"
+          >
+            <img
+              src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+              alt="Magdalenas"
+              class="w-full h-full object-cover rounded-lg"
+            />
+            <h3
+              class="absolute top-0 left-0 w-full font-playfair text-3xl font-semibold text-white bg-black bg-opacity-50 py-2"
+            >
+              Magdalenas
+            </h3>
+            <div
+              class="dropdown w-full bg-white rounded-lg shadow-lg hidden group-hover:block z-10"
+            >
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="magdalena-vainilla"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Magdalena de Vainilla"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Magdalena de Vainilla</span>
+              </button>
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="magdalena-chocolate"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Magdalena de Chocolate"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Magdalena de Chocolate</span>
+              </button>
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="magdalena-arandanos"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Magdalena de Arándanos"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Magdalena de Arándanos</span>
+              </button>
+            </div>
+          </div>
+          <!-- Galletas -->
+          <div
+            class="relative group bg-white rounded-lg shadow-lg flex-1 text-center h-64"
+          >
+            <img
+              src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+              alt="Galletas"
+              class="w-full h-full object-cover rounded-lg"
+            />
+            <h3
+              class="absolute top-0 left-0 w-full font-playfair text-3xl font-semibold text-white bg-black bg-opacity-50 py-2"
+            >
+              Galletas
+            </h3>
+            <div
+              class="dropdown w-full bg-white rounded-lg shadow-lg hidden group-hover:block z-10"
+            >
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="galleta-mantequilla"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Galleta de Mantequilla"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Galleta de Mantequilla</span>
+              </button>
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="galleta-chocolate"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Galleta de Chocolate"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Galleta de Chocolate</span>
+              </button>
+              <button
+                class="dessert-option flex items-center w-full px-6 py-4 hover:bg-pink-100"
+                data-dessert="galleta-avena"
+              >
+                <img
+                  src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+                  alt="Galleta de Avena"
+                  class="w-16 h-16 object-cover rounded mr-3"
+                />
+                <span class="text-lg">Galleta de Avena</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de información del postre -->
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          id="postres-grid"
+          id="dessert-info"
+          class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 hidden"
         >
-          <!-- Postre 1 -->
-          <div
-            class="postre-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
-            data-category="chocolate"
-          >
-            <img
-              src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
-              alt="Tarta de Chocolate"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold">Tarta de Chocolate</h3>
-              <p class="text-gray-600">
-                Deliciosa tarta con capas de chocolate y crema.
-              </p>
-              <span
-                class="inline-block bg-pink-600 text-white px-3 py-1 rounded mt-2"
-                >Chocolate</span
-              >
-            </div>
-          </div>
-          <!-- Postre 2 -->
-          <div
-            class="postre-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
-            data-category="frutal"
-          >
-            <img
-              src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
-              alt="Cheesecake de Fresa"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold">Cheesecake de Fresa</h3>
-              <p class="text-gray-600">
-                Suave cheesecake con salsa de fresa fresca.
-              </p>
-              <span
-                class="inline-block bg-pink-600 text-white px-3 py-1 rounded mt-2"
-                >Frutal</span
-              >
-            </div>
-          </div>
-          <!-- Postre 3 -->
-          <div
-            class="postre-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition"
-            data-category="variado"
-          >
-            <img
-              src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
-              alt="Macarons"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold">Macarons</h3>
-              <p class="text-gray-600">
-                Coloridos macarons con diversos sabores.
-              </p>
-              <span
-                class="inline-block bg-pink-600 text-white px-3 py-1 rounded mt-2"
-                >Variado</span
-              >
-            </div>
-          </div>
+          <h3
+            id="dessert-title"
+            class="font-playfair text-2xl font-semibold mb-2"
+          ></h3>
+          <img
+            id="dessert-image"
+            src="img/kobby-mendez-q54Oxq44MZs-unsplash.jpg"
+            alt="Postre"
+            class="w-full h-48 object-cover rounded mb-4"
+          />
+          <p id="dessert-description" class="text-gray-600 text-base"></p>
         </div>
       </div>
     </section>
