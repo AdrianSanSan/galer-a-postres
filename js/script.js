@@ -1,27 +1,49 @@
+/* Ejecuta el código cuando el DOM está completamente cargado */
 document.addEventListener("DOMContentLoaded", () => {
+  /* Muestra un mensaje en la consola para confirmar que el script se cargó */
   console.log("¡Galería de Postres cargada correctamente!");
 
-  // Carrusel
+  /* --- Gestión del carrusel --- */
+  /* Selecciona el contenedor interno del carrusel */
   const carouselInner = document.querySelector(".carousel-inner");
+  /* Selecciona todos los elementos del carrusel */
   const carouselItems = document.querySelectorAll(".carousel-item");
+  /* Inicializa el índice de la diapositiva actual */
   let currentIndex = 0;
 
+  /* Función para mostrar la siguiente diapositiva */
   function showNextSlide() {
-    currentIndex = (currentIndex + 1) % carouselItems.length;
-    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    /* Verifica que el contenedor y los elementos existan */
+    if (carouselInner && carouselItems.length > 0) {
+      /* Incrementa el índice, volviendo a 0 si llega al final */
+      currentIndex = (currentIndex + 1) % carouselItems.length;
+      /* Desplaza el contenedor para mostrar la siguiente diapositiva */
+      carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
   }
 
-  setInterval(showNextSlide, 3000);
+  /* Si el carrusel existe, cambia de diapositiva cada 3 segundos */
+  if (carouselInner) {
+    setInterval(showNextSlide, 3000);
+  }
 
-  // Menús desplegables
+  /* --- Gestión de los menús desplegables y el modal --- */
+  /* Selecciona todas las opciones de los menús desplegables */
   const dessertOptions = document.querySelectorAll(".dessert-option");
+  /* Selecciona el contenedor del modal de información del postre */
   const dessertInfo = document.querySelector("#dessert-info");
+  /* Selecciona el fondo oscurecido del modal */
   const dessertBackdrop = document.querySelector("#dessert-info-backdrop");
+  /* Selecciona el título del modal */
   const dessertTitle = document.querySelector("#dessert-title");
+  /* Selecciona la imagen del modal */
   const dessertImage = document.querySelector("#dessert-image");
+  /* Selecciona la descripción del modal */
   const dessertDescription = document.querySelector("#dessert-description");
+  /* Selecciona el botón de cerrar el modal */
   const closeDessertInfo = document.querySelector("#close-dessert-info");
 
+  /* Objeto que almacena los datos de cada postre (título, imagen, descripción) */
   const dessertData = {
     "tarta-chocolate": {
       title: "Tarta de Chocolate",
@@ -79,22 +101,46 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  dessertOptions.forEach((option) => {
-    option.addEventListener("click", () => {
-      const dessertId = option.getAttribute("data-dessert");
-      const data = dessertData[dessertId];
+  /* Si hay opciones en los menús desplegables, añade eventos de clic */
+  if (dessertOptions.length > 0) {
+    dessertOptions.forEach((option) => {
+      option.addEventListener("click", () => {
+        /* Obtiene el ID del postre desde el atributo data-dessert */
+        const dessertId = option.getAttribute("data-dessert");
+        /* Obtiene los datos del postre correspondiente */
+        const data = dessertData[dessertId];
 
-      dessertTitle.textContent = data.title;
-      dessertImage.src = data.image;
-      dessertDescription.textContent = data.description;
+        /* Verifica que los datos y los elementos del modal existan */
+        if (
+          data &&
+          dessertTitle &&
+          dessertImage &&
+          dessertDescription &&
+          dessertInfo &&
+          dessertBackdrop
+        ) {
+          /* Actualiza el título, imagen y descripción del modal */
+          dessertTitle.textContent = data.title;
+          dessertImage.src = data.image;
+          dessertDescription.textContent = data.description;
 
-      dessertInfo.classList.remove("hidden");
-      dessertBackdrop.classList.remove("hidden");
+          /* Muestra el modal y el fondo oscurecido */
+          dessertInfo.classList.remove("hidden");
+          dessertBackdrop.classList.remove("hidden");
+        }
+      });
     });
-  });
+  }
 
-  closeDessertInfo.addEventListener("click", () => {
-    dessertInfo.classList.add("hidden");
-    dessertBackdrop.classList.add("hidden");
-  });
+  /* Si existe el botón de cerrar el modal, añade un evento de clic */
+  if (closeDessertInfo) {
+    closeDessertInfo.addEventListener("click", () => {
+      /* Verifica que el modal y el fondo oscurecido existan */
+      if (dessertInfo && dessertBackdrop) {
+        /* Oculta el modal y el fondo oscurecido */
+        dessertInfo.classList.add("hidden");
+        dessertBackdrop.classList.add("hidden");
+      }
+    });
+  }
 });

@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Define la codificación de caracteres como UTF-8 para soportar acentos y caracteres especiales -->
     <meta charset="UTF-8" />
+    <!-- Configura la vista para dispositivos móviles, asegurando un diseño responsivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto - Galería de Postres</title>
+    <!-- Establece el título de la página que aparece en la pestaña del navegador -->
+    <title>Galería de Postres</title>
+    <!-- Incluye Tailwind CSS desde un CDN para aplicar estilos predefinidos -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlaza el archivo CSS personalizado para estilos adicionales -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- Nueva barra superior -->
+    <!-- Barra superior fija que muestra el nombre de la galería -->
     <header
-      class="bg-pink-700 text-white text-center py-3 fixed w-full top-0 z-20"
+      class="bg-pink-600 text-white text-center py-3 fixed w-full top-0 z-20"
     >
+      <!-- Título principal de la galería con fuente grande y negrita -->
       <h1 class="text-3xl font-bold">Galería de Postres</h1>
     </header>
 
-    <!-- Barra de navegación -->
+    <!-- Barra de navegación fija para moverse entre páginas -->
     <nav class="bg-pink-600 text-white p-4 fixed w-full top-12 z-10">
+      <!-- Contenedor centrado para los enlaces de navegación -->
       <div class="container mx-auto flex justify-center items-center">
+        <!-- Lista de enlaces de navegación -->
         <ul class="flex space-x-6 text-xl">
+          <!-- Enlace a la página de inicio con efecto de subrayado al pasar el ratón -->
           <li><a href="index.html" class="hover:underline">Inicio</a></li>
+          <!-- Enlace a la página de postres con efecto de subrayado al pasar el ratón -->
           <li><a href="postres.html" class="hover:underline">Postres</a></li>
-          <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+          <!-- Elemento de la página actual (Contacto), deshabilitado y en gris -->
+          <li><span class="text-gray-300 cursor-default">Contacto</span></li>
         </ul>
       </div>
     </nav>
 
-    <section class="pt-28 pb-10">
+    <!-- Sección principal que contiene el formulario de contacto -->
+    <section
+      class="min-h-screen pt-28 pb-10 bg-cover bg-center"
+      style="background-image: url('img/fondoContactanos.jpg')"
+    >
+      <!-- Contenedor centrado para el formulario -->
       <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Contáctanos</h2>
+        <!-- Título de la sección de contacto -->
+        <h2 class="text-3xl font-bold text-center mb-8 text-white">
+          Contáctanos
+        </h2>
+        <!-- Formulario para enviar mensajes -->
         <form
           id="contact-form"
           class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg"
         >
+          <!-- Campo para el nombre -->
           <div class="mb-4">
             <label for="name" class="block text-gray-700 font-semibold mb-2"
               >Nombre</label
@@ -45,6 +66,7 @@
               required
             />
           </div>
+          <!-- Campo para el correo electrónico -->
           <div class="mb-4">
             <label for="email" class="block text-gray-700 font-semibold mb-2"
               >Correo Electrónico</label
@@ -57,6 +79,7 @@
               required
             />
           </div>
+          <!-- Campo para el mensaje -->
           <div class="mb-4">
             <label for="message" class="block text-gray-700 font-semibold mb-2"
               >Mensaje</label
@@ -69,6 +92,7 @@
               required
             ></textarea>
           </div>
+          <!-- Botón para enviar el formulario -->
           <button
             type="submit"
             class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 w-full"
@@ -76,12 +100,14 @@
             Enviar
           </button>
         </form>
+        <!-- Mensaje de confirmación que aparece tras enviar el formulario -->
         <p id="form-message" class="text-center mt-4 text-green-600 hidden">
           ¡Mensaje enviado con éxito!
         </p>
       </div>
     </section>
 
+    <!-- Incluye el archivo JavaScript, aunque no se usa directamente en esta página -->
     <script src="js/script.js"></script>
   </body>
 </html>

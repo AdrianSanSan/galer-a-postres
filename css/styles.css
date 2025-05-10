@@ -1,80 +1,115 @@
+/* Elimina márgenes y rellenos por defecto del body */
 body {
   margin: 0;
   padding: 0;
 }
 
+/* Añade un pequeño relleno lateral al contenedor principal */
 .container {
   padding: 0 1rem;
 }
 
-/* Estilo para el título "Nuestros Postres" y títulos de postres */
+/* Estilo para los títulos de postres en el modal */
 .dessert-title {
+  /* Añade una sombra al texto para mayor legibilidad */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* Aplica un gradiente rosa al texto */
   background: linear-gradient(to right, #f472b6, #ec4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* Añade relleno y bordes redondeados */
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  /* Muestra el título como bloque en línea */
   display: inline-block;
 }
 
-/* Animación para los menús */
+/* Animación para los contenedores de los menús (Tartas, Magdalenas, Galletas) */
 .group {
+  /* Suaviza la transición al escalar */
   transition: transform 0.2s ease;
 }
 
+/* Escala ligeramente el contenedor al pasar el ratón */
 .group:hover {
   transform: scale(1.05);
+  /* Asegura que el contenedor esté sobre otros elementos */
   z-index: 10;
 }
 
-/* Animación para los desplegables */
+/* Estilo para los menús desplegables */
 .dropdown {
+  /* Oculta el desplegable por defecto */
   display: none;
+  /* Suaviza la transición de opacidad y transformación */
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* Muestra el desplegable al pasar el ratón sobre el contenedor o el propio desplegable */
 .group:hover .dropdown,
 .dropdown:hover {
   display: block;
+  /* Hace el desplegable completamente visible */
   opacity: 1;
+  /* Restaura la posición y escala original */
   transform: translateY(0) scale(1);
 }
 
-/* Estilo para las opciones del desplegable */
+/* Estilo para las opciones de los desplegables */
 .dessert-option {
+  /* Suaviza la transición al escalar */
   transition: transform 0.2s ease;
 }
 
+/* Escala ligeramente la opción al pasar el ratón */
 .dessert-option:hover {
   transform: scale(1.03);
 }
 
+/* Estilo para las imágenes dentro de las opciones */
 .dessert-option img {
+  /* Suaviza la transición al escalar */
   transition: transform 0.2s ease;
 }
 
+/* Escala la imagen al pasar el ratón sobre la opción */
 .dessert-option:hover img {
   transform: scale(1.1);
 }
 
-/* Estilo para el botón de cerrar */
+/* Estilo para el botón de cerrar el modal */
 #close-dessert-info {
+  /* Suaviza la transición del color */
   transition: color 0.2s ease;
 }
 
-/* Estilo para el carrusel */
+/* Estilo para el contenedor del carrusel */
 .carousel {
+  /* Posiciona el carrusel relativo para elementos internos absolutos */
   position: relative;
+  /* Añade bordes redondeados */
   border-radius: 0.5rem; /* Equivalente a rounded-lg */
 }
 
-/* Estilo para el fondo oscurecido */
+/* Estilo para el fondo oscurecido del modal */
 #dessert-info-backdrop {
+  /* Suaviza la transición de opacidad */
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Estilo para dessert-info */
+/* Estilo para el contenedor del modal de información del postre */
 #dessert-info {
+  /* Suaviza la transición de transformación */
   transition: transform 0.3s ease-in-out;
+}
+
+/* Elimina los bordes blancos del carrusel y los menús */
+.border-2.border-white {
+  border: none;
+}
+
+/* Redondea las esquinas superiores de los títulos de los menús */
+.relative.group h3 {
+  border-top-left-radius: 0.5rem; /* Equivalente a rounded-lg */
+  border-top-right-radius: 0.5rem;
 }
