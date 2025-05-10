@@ -7,15 +7,6 @@ body {
   padding: 0 1rem;
 }
 
-/* Fuentes personalizadas */
-.font-playfair {
-  font-family: "Playfair Display", serif;
-}
-
-.font-sans {
-  font-family: "Open Sans", sans-serif;
-}
-
 /* Animación para los menús */
 .group {
   transition: transform 0.2s ease;
@@ -56,8 +47,18 @@ body {
   transform: scale(1.1);
 }
 
+/* Estilo para el botón de cerrar */
+#close-dessert-info {
+  transition: color 0.2s ease;
+}
+
 /* Estilo para el carrusel */
 .carousel {
   position: relative;
   border-radius: 0.5rem; /* Equivalente a rounded-lg */
+}
+
+/* Estilo para el fondo oscurecido */
+#dessert-info-backdrop {
+  transition: opacity 0.3s ease-in-out;
 }
